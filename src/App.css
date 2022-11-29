@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+:root
+{
+    --bgcolor: #1f1f38;
+    --bgcolor-alt: #2c2c6c;
+    --primary: #4db5ff;
+    --primary-alt: #rgba(77, 181, 255, 0.4);
+    --light: rgba(255, 255, 255, 0.6);
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar
+{
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body
+{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bgcolor);
+    color: white;
+    line-height: 1.7;
 }
 
-.App-link {
-  color: #61dafb;
+.container
+{
+    width: var(--container-width-lg);
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1, h2, h3, h4, h5
+{
+    font-weight: 500;
+}
+
+h1
+{
+    font-size: 2.5rem;
+}
+
+section
+{
+    margin-top: 8rem;
+}
+
+section > h2, section > h5
+{
+    text-align: center;
+    color: var(--light);
+}
+
+section > h2 {
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.text-light
+{
+    color: var(--light);
+}
+
+a{
+    color: var(--primary);
+}
+
+a:hover
+{
+    color: white;
+}
+
+.btn
+{
+    width: max-content;
+    display: inline-block;
+    color: var(--primary);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--primary);
+}
+
+.btn:hover
+{
+    background-color: white;
+    color: var(--bgcolor);
+    border-color: var(--bgcolor);
+}
+
+img
+{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* MEDIA QUERIES FOR MEDUIM DEVICES */
+@media screen and (max-width: 1024px) {
+    .container
+    {
+        width: var(--container-width-md);
+    }
+
+    section
+    {
+        margin-top: 6rem;
+    }
+}
+
+/* SMALL DEVICES */
+@media screen and (max-width: 600px) {
+    .container
+    {
+        width: var(--container-width-sm);
+    }
+
+    section > h2
+    {
+        margin-top: 2rem;
+    }
 }

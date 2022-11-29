@@ -1,0 +1,41 @@
+.container.contact-container {
+    width: 58%;
+    
+  }
+  
+  
+  /* styling forms */
+  
+  form{
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      width: 100%;
+  }
+  input,textarea{
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background: transparent;
+      border: 2px solid rgba(77, 181, 255, 0.4);
+      resize: none;
+      color: #fff;
+      font-size: 1rem;
+  }
+  
+  /* ==========Media queries (medium devices) */
+  
+  @media screen and (max-width: 1024px) {
+      .container.contact-container{
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+      }
+      
+    }
+    /* ==========Media queries (smaller devices) */
+    @media screen and (max-width: 600px) {
+      .container.contact-container{
+          width: 90%;
+      }
+    }
+  
