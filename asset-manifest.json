@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a823c1e3.css",
+    "main.js": "/portfolio/static/js/main.99c60aaf.js",
+    "static/media/facebook.png": "/portfolio/static/media/facebook.fface3f1d8dd0f48d9fd.png",
+    "static/media/wallpaper.jpg": "/portfolio/static/media/wallpaper.e2d89fafbc81661473ba.jpg",
+    "static/media/reviews.png": "/portfolio/static/media/reviews.7077b668cb7b5142a295.png",
+    "static/media/tour-cards.png": "/portfolio/static/media/tour-cards.9add9d8eeaa0f6f4b662.png",
+    "static/media/avatar1.jpg": "/portfolio/static/media/avatar1.fb4452e7f286d3636ef9.jpg",
+    "static/media/CV.pdf": "/portfolio/static/media/CV.28032afd364d5d99ebde.pdf",
+    "static/media/todo.png": "/portfolio/static/media/todo.934ee278ea008bfde0cf.png",
+    "index.html": "/portfolio/index.html",
+    "main.a823c1e3.css.map": "/portfolio/static/css/main.a823c1e3.css.map",
+    "main.99c60aaf.js.map": "/portfolio/static/js/main.99c60aaf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a823c1e3.css",
+    "static/js/main.99c60aaf.js"
+  ]
+}
