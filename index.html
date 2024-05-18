@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandip Shakya</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio | Sandip Shakya</title>
+    <!-- IMPORT BOXICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
-
 <body>
-    <header class="header">
-        <a href="" class="logo">Sandip Shakya</a>
-
-        <nav class="navbar">
-            <a href="">Home</a>
-            <a href="#about">About</a>
-            <a href="">Skill</a>
-            <a href="">My Works</a>
-            <a href="">Contact</a>
-        </nav>
-    </header>
-
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Sandip Shakya</h1>
-            <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm a Web Developer with extensive experience for ver a year.
-                <br> with expertise in Angular in Frontend and .net in Backend
-            </p>
-
-            <div class="home-links">
-                <a href=""><i class="bx bxl-facebook"></i></a>
-                <a href=""><i class="bx bxl-github"></i></a>
-                <a href=""><i class="bx bxl-linkedin"></i></a>
-            </div>
-
-            <button class="btn">
-                More About Me
-            </button>
+    <!-- WRAPPER FOR BLUR BACKGROUND -->
+    <div class="wrapper">
+        <div class="circle-1"></div>
+    </div>
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="logo">
+            <span>Sandip Shakya</span>
         </div>
-        <img class="home-img" src="./assets/me.jpg" alt="me">
-    </section>
+        <ul class="nav-menu">
+            <li class="nav-list">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list">
+                <a href="#" class="nav-link">About Me</a>
+            </li>
+            <li class="nav-list">
+                <a href="#" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-list">
+                <a href="#" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-list">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="nav-button">
+            <button class="btn hire-me-btn">Hire Me</button>
+            <span class="dark-mode-toggle"><i class="bx bx-moon"></i></span>
+            <span class="menu-toggle"><i class="bx bx-menu"></i></span>
+        </div>
+    </header>
+    <!-- Header SECTION END -->
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="col col-1">
+            <div class="hero-work">
+                <p>I Am <br> <span class="text"></span></p>
+            </div>
+            <div class="hero-description">
+                <p>I am a web developer, proficient in coding and maintaining websites to ensure functionality
+                    and responsiveness.
+                </p>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn download-btn">
+                    <i class="bx bx-file"></i>
+                    <span>Download CV</span>
+                </button>
+            </div>
+            <div class="hero-social-icons">
+                <i class="bx bxl-facebook-circle"></i>
+                <i class="bx bxl-github"></i>
+                <i class="bx bxl-linkedin"></i>
 
-    <section class="about" id="about">
-        <div class="about-img"></div>
-    </section>
-
-    <script src="main.js"></script>
+            </div>
+        </div>
+        <div class="col col-2">
+            <div class="hero-img-container">
+                <img src="./assets/me.jpg" alt="" class="hero-img">
+            </div>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
 </body>
-
 </html>

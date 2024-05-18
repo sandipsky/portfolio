@@ -1,92 +1,263 @@
+/* ABRI FATFACE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400;500;600;700;800;900&display=swap');
+
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+}
+
+
+/* ===== COLOR VARIABLES ===== */
+:root {
+    --first-color: #6429EF;
+    --second-color: #E7DBDB;
+    --third-color: #FFFFFF;
+    --black-color: #000000;
+    --dark-blue: #372461;
+    --bg-color: #FFFFFF;
+    --blur-element-color: #E7DBDB;
+    --shadow-1: 0 0 20px 5px rgb(101, 41, 240, 0.5);
+    --shadow-2: 0 0 20px 5px rgb(232, 219, 219);
 }
 
 body {
-    color: ededed;
+    background-color: var(--bg-color);
 }
 
-.header {
-    position: fixed;
+/* ===== DARK MODE COLOR VARIABLES ===== */
+body.dark-mode {
+    --black-color: #fff;
+    --dark-blue: #6429EF;
+    --bg-color: #222;
+    --blur-element-color: #555;
+}
+
+/* ===== Blur Background ===== */
+.wrapper {
+    position: absolute;
     top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    filter: blur(50px);
+    z-index: 1;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--blur-element-color);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.wrapper::after {
+    content: '';
+    position: absolute;
+    top: 160px;
+    right: 10vw;
+    width: 100px;
+    height: 100px;
+    background-color: var(--blur-element-color);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.wrapper .circle-1 {
+    position: absolute;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+    z-index: 0;
+    left: 60%;
+}
+
+/* ===== Header - Navigation Bar ===== */
+header {
+    position: fixed;
+    font-family: 'Abri Fatface', serif;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    padding: 0 8vw;
+}
+
+.logo span {
+    font-size: 35px;
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list {
+    padding: 0 30px;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 18px;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: var(--first-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
     left: 0;
+    bottom: -7px;
     width: 100%;
-    padding: 20px;
+    height: 2px;
+    background-color: var(--first-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-button {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    background: transparent;
-}
-
-.logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.navbar a {
-    display: inline-block;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: all .3s ease;
-}
-
-.navbar a:hover {
-    color: #0ef;
-}
-
-.home {
-    width: 100%;
-    justify-content: space-between;
-    height: 100vh;
-    background-color: black;
-    display: flex;
-    padding: 70px 10% 0;
-    align-items: center;
-}
-
-.home-img {
-    border-radius: 50%;
-    width: 40%;
-    height: 75%;
-}
-
-.home-content {
-    color: white;
-}
-
-.home-links a{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    color: white;
-    margin: 30px 15px 30px 0;
-    font-size: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-
-.home-links a:hover {
-    background-color: white;
-    color: black;
+    gap: 20px;
 }
 
 .btn {
-    background-color: white;
-    color: black;
-    border-radius: 12px;
-    font-weight: 600;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 0 24px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: opacity .3s;
 }
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.hire-me-btn {
+    font-family: 'Abri Fatface', serif;
+    background-color: var(--second-color);
+}
+
+.nav-button span {
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+.nav-button .menu-toggle {
+    font-size: 18px;
+}
+
+.nav-button .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* ===== Hero section ===== */
+.text {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    padding: 0 8vw;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.hero-work {
+    font-family: 'Abri Fatface', serif;
+    font-size: 50px;
+    color: var(--black-color);
+}
+
+.hero-description {
+    font-family: 'Poppins', sans-serif;
+    padding-block: 20px 30px;
+    width: 500px;
+    color: var(--black-color);
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--first-color);
+    color: var(--third-color);
+}
+
+.hero-social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 20px 10px;
+
+}
+
+.hero-social-icons i {
+    font-size: 24px;
+    color: var(--black-color);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.hero-social-icons i:hover {
+    color: var(--first-color);
+}
+
+/* ====== Hero Image section ===== */
+.col-2 {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-img-container {
+    width: 400px;
+    height: 405px;
+    background: var(--first-color);
+    border-radius: 46% 54% 34% 66% / 54% 61% 39% 46%;
+    overflow: hidden;
+}
+
+.hero-img {
+    height: 405px;
+}
+
+/* ===== Animations ==== */
+
+
+/* ===== Responsive Design ===== */
