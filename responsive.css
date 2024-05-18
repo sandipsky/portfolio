@@ -6,11 +6,20 @@
 
 @media (max-width: 962px) {
     header {
-        position: relative;
+        position: fixed;
+        margin-top: -100px;
     }
+
+    /* header.scrolled {
+        position: fixed;
+    } */
 
     .nav-button .menu-toggle {
         display: block;
+    }
+
+    .scroll-btn {
+        display: none;
     }
 
     .nav-menu {
@@ -41,6 +50,7 @@
     }
 
     .hero {
+        margin-top: 100px;
         flex-direction: column;
     }
 

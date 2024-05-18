@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,14 @@
     <link rel="stylesheet" href="./responsive.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
+
 <body>
     <!-- WRAPPER FOR BLUR BACKGROUND -->
     <div class="wrapper">
         <div class="circle-1"></div>
     </div>
+    <!-- WRAPPER FOR BLUR BACKGROUND -->
+
     <!-- HEADER SECTION -->
     <header>
         <div class="logo">
@@ -22,30 +26,36 @@
         </div>
         <ul class="nav-menu">
             <li class="nav-list">
-                <a href="#" class="nav-link">Home</a>
+                <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-list">
-                <a href="#" class="nav-link">About Me</a>
+                <a href="#about" class="nav-link">About Me</a>
             </li>
             <li class="nav-list">
-                <a href="#" class="nav-link">Skills</a>
+                <a href="#skills" class="nav-link">Skills</a>
             </li>
             <li class="nav-list">
-                <a href="#" class="nav-link">Projects</a>
+                <a href="#projects" class="nav-link">Projects</a>
             </li>
             <li class="nav-list">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </li>
         </ul>
         <div class="nav-button">
-            <button class="btn hire-me-btn">Hire Me</button>
-            <span class="dark-mode-toggle"><i class="bx bx-moon"></i></span>
+            <a href="#contact" class="btn hire-me-btn">Hire Me</a>
+            <span class="dark-mode-toggle"><i class="dark-mode-icon bx bx-moon"></i></span>
             <span class="menu-toggle"><i class="bx bx-menu"></i></span>
         </div>
     </header>
     <!-- Header SECTION END -->
+
     <!-- HERO SECTION -->
-    <div class="hero">
+    <section id="home" class="hero">
+        <a href="#about" class="btn scroll-btn">
+            <i class="bx bx-mouse"></i>
+            <span>Scroll Down</span>
+        </a>
+
         <div class="col col-1">
             <div class="hero-work">
                 <p>I Am <br> <span class="text"></span></p>
@@ -63,6 +73,7 @@
             </div>
             <div class="hero-social-icons">
                 <i class="bx bxl-facebook-circle"></i>
+                <i class="bx bxl-instagram"></i>
                 <i class="bx bxl-github"></i>
                 <i class="bx bxl-linkedin"></i>
 
@@ -73,8 +84,36 @@
                 <img src="./assets/me.jpg" alt="" class="hero-img">
             </div>
         </div>
-    </div>
-    
+    </section>
+    <!-- HERO SECTION END -->
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <h1 class="section-title">About</h1>
+    </section>
+    <!-- ABOUT SECTION END -->
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+
+    </section>
+    <!-- SKILLS SECTION END -->
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+
+    </section>
+    <!-- PROJECTS SECTION END -->
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+
+    </section>
+    <!-- CONTACT SECTION END -->
+
+
+
     <script src="./main.js"></script>
 </body>
+
 </html>
