@@ -1,5 +1,5 @@
 @media (max-width: 1052px) {
-    header .hero {
+    header, .hero, .about, .skills, .projects, .contact {
         padding: 0 4vw;
     }
 }
@@ -68,32 +68,57 @@
         margin-top: 7px;
     }
 
+    .about-content {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .about-content .col-1 {
+        align-items: center;
+    }
+
+    .about-card-container {
+        justify-content: center;
+    }
+
+    .skills {
+        margin-top: 300px;
+    }
+
    
 }
 
 @media (max-width: 514px) {
-    header, .hero {
+    header, .hero, .about, .skills, .projects, .contact {
         padding: 6vw;
+    }
+
+    .about {
+        margin-top: -100px;
     }
 
     .hire-me-btn {
         display: none;
     }
 
-    .hero-work {
-        font-size: 40px;
+    .hero-work, .section-title, header .logo span {
+        font-size: 32px;
     }
 
-    .hero-img-container {
+    .hero-img-container,.about-img {
         width: 270px;
         height: 275px;
     }
 
-    .hero-img {
+    .hero-img  {
         height: 275px;
     }
 
     .hero-description {
         width: inherit;
+    }
+    .skills {
+        margin-top: 400px;
     }
 }
