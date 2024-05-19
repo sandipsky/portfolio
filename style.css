@@ -375,6 +375,46 @@ body.dark-mode header.scrolled {
     height: 100vh;
 }
 
+.skill-title {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.skills-content
+{
+    display: flex;
+}
+
+.skills-content .col-1 {
+    justify-content: flex-start;
+}
+
+.tech-icons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.tech-icon img {
+    height: 100px;
+    width: 100px;
+}
+
+.tech-icon h2 {
+    font-weight: 500;
+    color: var(--black-color);
+}
+
 /* ===== Projects ==== */
 .projects {
     height: 100vh;

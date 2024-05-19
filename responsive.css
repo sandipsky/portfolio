@@ -86,6 +86,10 @@
         margin-top: 300px;
     }
 
+    .tech-icons-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
    
 }
 
