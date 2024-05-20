@@ -53,6 +53,7 @@ body.dark-mode {
     left: 20px;
     background-color: #6429EF;
     cursor: pointer;
+    z-index: 111;
 }
 
 /* ===== Blur Background ===== */
