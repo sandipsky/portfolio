@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./responsive.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link href="animate.css" type="text/css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -18,6 +20,10 @@
         <div class="circle-1"></div>
     </div>
     <!-- WRAPPER FOR BLUR BACKGROUND -->
+
+    <a href="#home" class="scroll-up">
+        <i class="bx bx-up-arrow-alt"></i>
+    </a>
 
     <!-- HEADER SECTION -->
     <header>
@@ -50,7 +56,7 @@
     <!-- Header SECTION END -->
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero">
+    <section id="home" class="hero wow bounceInUp">
         <a href="#about" class="btn scroll-btn">
             <i class="bx bx-mouse"></i>
             <span>Scroll Down</span>
@@ -89,16 +95,16 @@
 
     <!-- ABOUT SECTION -->
     <section id="about" class="about">
-        <h1 class="section-title">About Me</h1>
+        <h1 class="section-title wow bounceInDown">About Me</h1>
 
         <div class="about-content">
-            <div class="col col-2">
+            <div class="col col-2 wow fadeInLeft">
                 <div class="about-img">
                     <img src="./assets/me2.jpg" alt="">
                 </div>
             </div>
 
-            <div class="col col-1">
+            <div class="col col-1 wow fadeInRight">
                 <div class="about-card-container">
                     <div class="about-card">
                         <i class="bx bx-award"></i>
@@ -113,14 +119,19 @@
                     </div>
                 </div>
                 <div class="about-description">
-                    <p>I am a passionate web developer with over a year of hands-on experience in creating dynamic and responsive websites. Based in Patan, Lalitpur, I have honed my skills in various web technologies and frameworks, always striving to deliver clean and efficient code. I hold a Bachelor's degree in Computer Science and Information Technology (CSIT), which has provided me with a solid foundation in both the theoretical and practical aspects of web development. I am eager to bring my creativity and technical expertise to new and exciting projects.
+                    <p>I am a passionate web developer with over a year of hands-on experience in creating dynamic and
+                        responsive websites. Based in Patan, Lalitpur, I have honed my skills in various web
+                        technologies and frameworks, always striving to deliver clean and efficient code. I hold a
+                        Bachelor's degree in Computer Science and Information Technology (CSIT), which has provided me
+                        with a solid foundation in both the theoretical and practical aspects of web development. I am
+                        eager to bring my creativity and technical expertise to new and exciting projects.
                     </p>
                 </div>
-               
-                    <a href="#contact" class="btn download-btn">
-                        Let's Talk
-                    </a>
-               
+
+                <a href="#contact" class="btn download-btn">
+                    Let's Talk
+                </a>
+
             </div>
         </div>
 
@@ -130,12 +141,12 @@
 
     <!-- SKILLS SECTION -->
     <section id="skills" class="skills">
-        <h1 class="section-title">Skills</h1>
+        <h1 class="section-title wow fadeInDown">Skills</h1>
         <div class="skills-content">
-            <div class="col col-1">
-                <div class="skill-title">
+            <div class="col col-1 wow fadeInUp">
+                <!-- <div class="skill-title">
                     My Tech Stack
-                </div>
+                </div> -->
                 <div class="tech-icons-container">
                     <div class="tech-icon">
                         <img src="./assets/logos/js.png" alt="">
@@ -178,8 +189,26 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-1">
-                <div class="skill-title">Experience</div>
+            <div class="col col-1 wow fadeInUp">
+                <!-- <div class="skill-title">Experience</div> -->
+
+                <div class="contents">
+
+                    <div class="box">
+                        <h4>April, 2023 - September, 2023</h4>
+                        <h3>Frontend Intern(Angular)</h3>
+                        <p>Worked on Restaurant POS and ERP software at Hamro San Pvt. Ltd, Tinkune as a Frontend
+                            Intern.</p>
+                    </div>
+
+                    <div class="box">
+                        <h4>September, 2023 - Present</h4>
+                        <h3>Frontend Developer(Angular)</h3>
+                        <p>Worked on Dental Management System and Inventory Management System at Annofi Technologies
+                            Pvt. Ltd, Patan Dhoka as a Frontend Developer.</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -187,19 +216,77 @@
 
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects">
-        <h1 class="section-title">Portfolio</h1>
+        <h1 class="section-title wow fadeInDown">Portfolio</h1>
+
+        <div class="projects-content">
+            <div class="projects-card wow zoomIn">
+                <img src="./assets/logos/pro1.png" alt="">
+                <h2>Ecommerce Store</h2>
+                <p>An Ecommerce Store built using React where a customer can purchase
+                    clothing items, with add to cart functionaliy and payment.
+                </p>
+            </div>
+
+            <div class="projects-card wow zoomIn">
+                <img src="./assets/logos/pro2.png" alt="">
+                <h2>Restaurant POS System</h2>
+                <p>An Ecommerce Store built using React where a customer can purchase
+                    clothing items, with add to cart functionaliy and payment.
+                </p>
+            </div>
+
+            <div class="projects-card wow zoomIn">
+                <img src="./assets/logos/pro3.png" alt="">
+                <h2>Inventory System</h2>
+                <p>An Ecommerce Store built using React where a customer can purchase
+                    clothing items, with add to cart functionaliy and payment.
+                </p>
+            </div>
+        </div>
     </section>
     <!-- PROJECTS SECTION END -->
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
-        <h1 class="section-title">Contact</h1>
+        <h1 class="section-title wow bounceInDown">Contact</h1>
+
+        <div class="contact-content">
+            <div class="col wow bounceInLeft">
+                <div class="hero-img-container">
+                    <img src="./assets/logos/contact.jpg" alt="" class="hero-img">
+                </div>
+                <div class="hero-social-icons">
+                    <i class="bx bxl-facebook-circle"></i>
+                    <i class="bx bxl-instagram"></i>
+                    <i class="bx bxl-github"></i>
+                    <i class="bx bxl-linkedin"></i>
+
+                </div>
+            </div>
+
+            <form class="contact-form wow bounceInRight">
+                <input type="text" placeholder="Name" id="name" name="name">
+                <input type="email" placeholder="Email" id="email" name="email">
+                <textarea name="message" id="message" style="height: 300px;" placeholder="Message"></textarea>
+                <button type="submit" class="btn download-btn">
+                    Send Message
+                </button>
+            </form>
+        </div>
     </section>
     <!-- CONTACT SECTION END -->
 
+    <footer>
+        <p>&copy; Copyright 2024 Sandip Shakya </p>
+    </footer>
 
 
+    <script src="wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="./main.js"></script>
+
 </body>
 
 </html>

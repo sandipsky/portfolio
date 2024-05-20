@@ -68,7 +68,7 @@
         margin-top: 7px;
     }
 
-    .about-content {
+    .about-content, .skills-content, .contact-content {
         padding-top: 20px;
         flex-direction: column;
         gap: 70px;
@@ -90,16 +90,46 @@
         grid-template-columns: 1fr 1fr;
     }
 
-   
+    .projects
+    {
+        margin-top: 400px;
+    }
+
+    .projects-card {
+        width: 40%;
+    }
+
+    .contact {
+        margin-top: 100px;
+    }
+
+    .contact .col .hero-img-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+
+
+    footer {
+        margin-top: 500px;
+    }
 }
 
 @media (max-width: 514px) {
+    .scroll-btn {
+        bottom: 150px;
+    }
+
     header, .hero, .about, .skills, .projects, .contact {
         padding: 6vw;
     }
 
     .about {
-        margin-top: -100px;
+        margin-top: -20px;
     }
 
     .hire-me-btn {
@@ -123,6 +153,18 @@
         width: inherit;
     }
     .skills {
+        margin-top: 100px;
+    }
+
+    .section-title {
+        padding-top: 100px;
+    }
+
+    .projects-card {
+        width: 100%;
+    }
+
+    footer {
         margin-top: 400px;
     }
 }

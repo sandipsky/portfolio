@@ -1,8 +1,5 @@
-/* ABRI FATFACE FONT */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400;500;600;700;800;900&display=swap');
 
-/* POPPINS FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -29,6 +26,7 @@
 
 body {
     background-color: var(--bg-color);
+    font-family: "Fira Sans", sans-serif;
 }
 
 /* ===== DARK MODE COLOR VARIABLES ===== */
@@ -38,6 +36,23 @@ body.dark-mode {
     --bg-color: #222;
     --blur-element-color: #555;
     --black-alt-color: #3d3c3c;
+}
+
+.scroll-up {
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #6429EF;
+    cursor: pointer;
 }
 
 /* ===== Blur Background ===== */
@@ -87,7 +102,6 @@ body.dark-mode {
 /* ===== Header - Navigation Bar ===== */
 header {
     position: fixed;
-    font-family: 'Abri Fatface', serif;
     height: 100px;
     width: 100%;
     display: flex;
@@ -178,7 +192,6 @@ body.dark-mode header.scrolled {
 }
 
 .hire-me-btn {
-    font-family: 'Abri Fatface', serif;
     background-color: var(--second-color);
     color: #000;
 }
@@ -238,13 +251,11 @@ body.dark-mode header.scrolled {
 }
 
 .hero-work {
-    font-family: 'Abri Fatface', serif;
     font-size: 50px;
     color: var(--black-color);
 }
 
 .hero-description {
-    font-family: 'Poppins', sans-serif;
     padding-block: 20px 30px;
     width: 500px;
     color: var(--black-color);
@@ -297,7 +308,7 @@ body.dark-mode header.scrolled {
 /* ===== About ==== */
 .about, .skills, .projects, .contact {
     padding: 70px 8vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section-title {
@@ -336,7 +347,6 @@ body.dark-mode header.scrolled {
 }
 
 .about-description {
-    font-family: 'Poppins', sans-serif;
     padding-block: 20px 30px;
     text-align: justify;
     color: var(--black-color);
@@ -372,18 +382,20 @@ body.dark-mode header.scrolled {
 
 /* ===== Skills ==== */
 .skills {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .skill-title {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 600;
     color: var(--black-color);
+    padding-bottom: 24px;
 }
 
 .skills-content
 {
     display: flex;
+    gap: 48px;
 }
 
 .skills-content .col-1 {
@@ -406,21 +418,131 @@ body.dark-mode header.scrolled {
 }
 
 .tech-icon img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
 .tech-icon h2 {
     font-weight: 500;
+    font-size: 20px;
     color: var(--black-color);
+}
+
+.col .contents{
+	padding: 0px 30px;
+	border-left: 2px solid #bababa;
+}
+.col .contents .box{
+	position: relative;
+	padding: 20px;
+	background-color: var(--black-alt-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-bottom: 20px;
+}
+
+.col .contents .box::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right: calc(100% + 22px);
+	top: 0;
+	background-color: var(--first-color);
+	border: 2px solid white;
+}
+.box h4{
+	position: relative;
+	color: var(--first-color);
+}
+.box h3{
+	font-size: 19px;
+	padding: 10px 0px 6px;
+	color: var(--black-color);
+}
+.box p{
+	line-height: 1.2;
+	color: var(--black-color);
+	font-size: 17px;
 }
 
 /* ===== Projects ==== */
 .projects {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projects-card {
+    padding: 20px;
+	background-color: var(--black-alt-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+
+.projects-card img {
+    /* width: 360px; */
+    height: 240px;
+}
+
+.projects-card h2, .projects-card p {
+    color: var(--black-color);
 }
 
 /* ===== Contact ==== */
 .contact {
     height: 100vh;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .col 
+{
+    width: 50%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 30px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3.2px;
+    width: 100%;
+}
+
+
+footer {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+footer p {
+    color: var(--black-color);
 }
