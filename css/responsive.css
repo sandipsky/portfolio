@@ -1,0 +1,63 @@
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-info {
+        display: none;
+    }
+
+    .side-menu {
+        display: flex;
+    }
+
+    .side-menu .nav-links,
+    .side-menu .nav-info {
+        display: flex;
+    }
+
+    .hero,
+    .about,
+    .contact-container {
+        grid-template-columns: repeat(1, 1fr);
+        min-height: auto;
+    }
+
+    .hero-img {
+        width: 300px;
+        height: 305px;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .image-content {
+        order: 1;
+    }
+
+    .intro-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 678px) {
+
+    .section-header {
+        font-size: 2rem;
+    }
+
+    .journey-grid,
+    .skills-container,
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .category {
+        align-items: start;
+    }
+}
