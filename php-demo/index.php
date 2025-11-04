@@ -1,0 +1,374 @@
+<?php
+include 'db.php';
+
+$info = $conn->query("SELECT * FROM info LIMIT 1")->fetch_assoc();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <title>SANDIP SHAKYA</title>
+</head>
+
+<body>
+    <a href="#home" class="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <nav class="navbar">
+         <h1 class="nav-logo">
+            <?= explode(' ', $info['name'])[0] ?><span style="color: var(--primary-color)">
+            <?= explode(' ', $info['name'])[1] ?></span>
+        </h1>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="ri-menu-fill"></i>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+
+        <div class="nav-info">
+            <a href="#contact" class="btn">
+                Hire Me
+            </a>
+        </div>
+
+
+    </nav>
+
+    <div class="side-menu">
+        <div class="nav-close-container">
+            <span id="nav-close" class="nav-close"><i class="ri-close-large-fill"></i> </span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <br>
+        <div class="nav-info">
+            <a href="#contact" class="btn">
+                Hire Me
+            </a>
+        </div>
+    </div>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-right">
+            <h2>Hi, I am</h2>
+            <h1><?= $info['name'] ?></h1>
+            <h3><?= $info['title'] ?></h3>
+            <p>
+                <?= $info['short_description'] ?>
+            </p>
+            <div class="hero-btns">
+                <a href="./assets/CVsandip.pdf" download class="btn">Download CV</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+        <div class="image-content" data-aos="fade-left">
+            <div class="hero-img">
+                <img src="assets/header.png" alt="header" />
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="intro-image" data-aos="fade-right">
+            <img src="assets/intro.jpg" alt="intro" />
+        </div>
+        <div class="intro-content" data-aos="fade-left">
+            <h2 class="section-header">About Me</h2>
+            <p class="intro-description">
+                <?= $info['description'] ?>
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <p class="section-subheader" data-aos="fade-down">Why Choose Me</p>
+        <h2 class="section-header" data-aos="fade-down">My Experties Area</h2>
+        <div class="skills-container" data-aos="fade-up">
+            <!-- Frontend -->
+            <div class="category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li><span class="icon"><i class="ri-javascript-line ri-xl"></i></span> Javascript/Typescript</li>
+                    <li><span class="icon"><i class="ri-reactjs-line ri-xl"></i></span> React</li>
+                    <li><span class="icon"><i class="ri-angularjs-fill ri-xl"></i></span> Angular</li>
+                    <li><span class="icon"><i class="ri-tailwind-css-fill ri-xl"></i></span> Tailwind CSS</li>
+                    <li><span class="icon"><i class="ri-bootstrap-fill ri-xl"></i></span> Bootstrap</li>
+                </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="category">
+                <h3>Backend</h3>
+                <ul>
+                    <li><span class="icon"><i class="ri-nodejs-line ri-xl"></i></span> Node.js</li>
+                    <li><span class="icon"><i class="ri-leaf-fill ri-xl"></i></span> Spring Boot</li>
+                    <li><span class="icon"><i class="ri-window-fill ri-xl"></i></span> ASP.NET</li>
+                    <li><span class="icon"><i class="ri-database-2-line ri-xl"></i></span> MySQL</li>
+                </ul>
+            </div>
+
+            <!-- Other -->
+            <div class="category">
+                <h3>Other</h3>
+                <ul>
+                    <li><i class="ri-github-fill ri-xl"></i> Git/Github</li>
+                    <li><i class="ri-camera-2-fill ri-xl"></i> Photoshop</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <p class="section-subheader" data-aos="fade-down">My Qualifications</p>
+        <h2 class="section-header" data-aos="fade-down">Awesome Journey</h2>
+        <div class="journey-grid">
+            <div data-aos="fade-right">
+                <div class="journey-grid-header">
+                    <span><i class="ri-graduation-cap-line"></i></span> Education
+                </div>
+                <div class="journey-card">
+                    <span><i class="ri-circle-fill"></i></span>
+                    <div>
+                        <h4>Bsc. CSIT</h4>
+                        <h5>Academia International College</h5>
+                        <p>
+                            <span><i class="ri-calendar-fill"></i></span> 2018-2023
+                        </p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span><i class="ri-circle-fill"></i></span>
+                    <div>
+                        <h4>+2 Science</h4>
+                        <h5>Ideal Model School</h5>
+                        <p>
+                            <span><i class="ri-calendar-fill"></i></span> 2016-2018
+                        </p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span><i class="ri-circle-fill"></i></span>
+                    <div>
+                        <h4>Web Design and Development</h4>
+                        <h5>Aptech Computer Education</h5>
+                        <p>
+                            <span><i class="ri-calendar-fill"></i></span> 2016-2017
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="journey-grid-header">
+                    <span><i class="ri-briefcase-line"></i></span> Experience
+                </div>
+                <div class="journey-card">
+                    <span><i class="ri-circle-fill"></i></span>
+                    <div>
+                        <h4>Front End Developer</h4>
+                        <h5>Annofi Technologies Pvt. Ltd</h5>
+                        <p>
+                            <span><i class="ri-calendar-fill"></i></span> 2023-Present
+                        </p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span><i class="ri-circle-fill"></i></span>
+                    <div>
+                        <h4>Front End Developer</h4>
+                        <h5>Hamro SAN Pvt. Ltd</h5>
+                        <p>
+                            <span><i class="ri-calendar-fill"></i></span> 2022-2023
+                        </p>
+                    </div>
+                </div>
+                <div class="journey-card">
+                    <span><i class="ri-circle-fill"></i></span>
+                    <div>
+                        <h4>Analyst</h4>
+                        <h5>Cloudfactory</h5>
+                        <p>
+                            <span><i class="ri-calendar-fill"></i></span> 2020-2022
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-container">
+            <p class="section-subheader" data-aos="fade-down">My Portfolio</p>
+            <h2 class="section-header" data-aos="fade-down">Recent Works</h2>
+            <div class="portfolio-grid" data-aos="fade-up">
+                <div class="portfolio-card mix web">
+                    <img src="assets/pro1.png" alt="project" />
+                    <div class="card-overlay">
+                        <div class="card-overlay-content">
+                            <div>
+                                <h2>Ecommerce Website</h2>
+                            </div>
+                            <div>
+                                <a href="https://www.github.com/sandipsky/react-estore" target="_blank" class="portfolio-icon"><i
+                                        class="ri-github-fill ri-2x"></i></a>
+                                <a href="https://react-estore-sandipsky.netlify.app/" target="_blank" class="portfolio-icon"><i
+                                        class="ri-external-link-line ri-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card mix web game">
+                    <img src="assets/pro2.png" alt="project" />
+                    <div class="card-overlay">
+                        <div class="card-overlay-content">
+                            <div>
+                                <h2>Restaurant Management System</h2>
+                            </div>
+                            <div>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-github-fill ri-2x"></i></a>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-external-link-line ri-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card mix design">
+                    <img src="assets/project-3.jpg" alt="project" />
+                    <div class="card-overlay">
+                        <div class="card-overlay-content">
+                            <div>
+                                <h2>Ecommerce Admin Panel</h2>
+                            </div>
+                            <div>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-github-fill ri-2x"></i></a>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-external-link-line ri-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card mix design web">
+                    <img src="assets/project-4.jpg" alt="project" />
+                    <div class="card-overlay">
+                        <div class="card-overlay-content">
+                            <div>
+                                <h2>Inventory Management System</h2>
+                            </div>
+                            <div>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-github-fill ri-2x"></i></a>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-external-link-line ri-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card mix design game">
+                    <img src="assets/project-5.jpg" alt="project" />
+                    <div class="card-overlay">
+                        <div class="card-overlay-content">
+                            <div>
+                                <h2>Dental Management System</h2>
+                            </div>
+                            <div>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-github-fill ri-2x"></i></a>
+                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
+                                        class="ri-external-link-line ri-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card mix design">
+                    <img src="assets/project-6.jpg" alt="project" />
+                    <div class="card-overlay">
+                        <div class="card-overlay-content">
+                            <div>
+                                <h2>Expense Tracker</h2>
+                            </div>
+                            <div>
+                                <a href="https://www.github.com/react-expense-tracker" target="_blank" class="portfolio-icon"><i
+                                        class="ri-github-fill ri-2x"></i></a>
+                                <a href="https://www.github.com/react-expense-tracker" target="_blank" class="portfolio-icon"><i
+                                        class="ri-external-link-line ri-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <p class="section-subheader" data-aos="fade-down">Contact Me</p>
+        <h2 class="section-header" data-aos="fade-down">Have A Project On Your Mind</h2>
+        <div class="contact-container">
+            <div data-aos="fade-right">
+                <div class="intro-grid">
+                    <h5>
+                        <span><i class="ri-phone-line"></i></span> Phone
+                    </h5>
+                    <span>:</span>
+                    <p>+977 9843916741</p>
+                    <h5>
+                        <span><i class="ri-mail-line"></i></span> Email
+                    </h5>
+                    <span>:</span>
+                    <p>sandipshakya75@gmail.com</p>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://www.linkedin.com/in/sandip-shakya-8230b91a5/" target="_blank" class="contact-icon"><i
+                            class="ri-linkedin-fill ri-2x"></i></a>
+                    <a href="https://www.github.com/sandipsky" target="_blank" class="contact-icon"><i
+                            class="ri-github-fill ri-2x"></i></a>
+                </div>
+            </div>
+
+            <form action="#contact" id="contact-form" onsubmit="handleForm()" class="contact-form" data-aos="fade-left">
+                <div class="form-group">
+                    <input id="fullName" type="text" class="form-control" placeholder="Full name" required>
+                    <input id="email" type="email" class="form-control" placeholder="Email address" required>
+                </div>
+                <input id="subject" type="text" class="form-control" placeholder="Subject">
+                <textarea id="message" rows="5" class="form-control" placeholder="Tell about your project"></textarea>
+                <button type="submit" class="btn contact-btn" value="Send Message">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright 2025 &copy; SandipShakya All rights reserved.</p>
+    </footer>
+</body>
+<script src="./assets/js/aos.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="./assets/js/main.js"></script>
+</html>
