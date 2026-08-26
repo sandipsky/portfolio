@@ -4,379 +4,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Sandip Shakya — Frontend Developer</title>
+    <meta name="description" content="Sandip Shakya, frontend developer from Lalitpur, Nepal. Currently building healthcare software at Maitri Services.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/aos.css">
-    <title>SANDIP SHAKYA</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <a href="#home" class="scroll-up">
-        <i class="ri-arrow-up-line"></i>
-    </a>
 
-    <nav class="navbar">
-        <h1 class="nav-logo">SANDIP<span style="color: var(--primary-color)">SHAKYA</span></h1>
+    <header class="site-header" id="top">
+        <a href="#top" class="logo">sandip<span>.</span></a>
 
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="ri-menu-fill"></i>
-        </div>
+        <nav class="main-nav" id="main-nav">
+            <a href="#work">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <ul class="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
+        <a href="./assets/CVsandip.pdf" download class="btn btn-ghost nav-cv">Resume</a>
 
-        <div class="nav-info">
-            <a href="#contact" class="btn">
-                Hire Me
-            </a>
-        </div>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+            <span></span><span></span>
+        </button>
+    </header>
 
-
-    </nav>
-
-    <div class="side-menu">
-        <div class="nav-close-container">
-            <span id="nav-close" class="nav-close"><i class="ri-close-large-fill"></i> </span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-        <br>
-        <div class="nav-info">
-            <a href="#contact" class="btn">
-                Hire Me
-            </a>
-        </div>
+    <!-- mobile drawer -->
+    <div class="drawer" id="drawer">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="./assets/CVsandip.pdf" download>Resume ↓</a>
     </div>
 
+    <main>
 
-    <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-right">
-            <h2>Hi, I am</h2>
-            <h1>SANDIP SHAKYA</h1>
-            <h3>Full Stack Developer</h3>
-            <p>
-                I am a web developer, proficient in coding and maintaining websites to ensure functionality
-                and responsiveness.
+        <section class="hero">
+            <div class="hero-text">
+                <p class="kicker" data-aos="fade-up">Sandip Shakya — Frontend Developer</p>
+                <h1 data-aos="fade-up" data-aos-delay="100">
+                    I build clean, fast<br>
+                    <em>interfaces</em> for the web.
+                </h1>
+                <p class="hero-lede" data-aos="fade-up" data-aos-delay="200">
+                    Four years of shipping production frontends in Angular and React,
+                    from e-commerce stores to healthcare platforms. Based in Patan,
+                    Lalitpur — working with teams anywhere.
+                </p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#work" class="btn btn-solid">See my work</a>
+                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+                </div>
+                <p class="hero-status" data-aos="fade-up" data-aos-delay="400">
+                    <span class="dot"></span>
+                    Currently: Frontend Developer @ Maitri Services
+                </p>
+            </div>
+
+            <figure class="hero-photo" data-aos="fade-left" data-aos-delay="300">
+                <img src="assets/header.png" alt="Portrait of Sandip Shakya">
+                <figcaption>sandip.shakya — patan, nepal</figcaption>
+            </figure>
+        </section>
+
+        <section id="work" class="section">
+            <div class="section-head" data-aos="fade-up">
+                <span class="kicker">Selected work</span>
+                <h2>Things I've built</h2>
+            </div>
+
+            <div class="work-grid">
+                <article class="work-card" data-aos="fade-up">
+                    <div class="work-thumb">
+                        <img src="assets/pro1.png" alt="E-Store screenshot" loading="lazy">
+                    </div>
+                    <div class="work-body">
+                        <h3>E-Store</h3>
+                        <p>E-commerce storefront with cart, filtering and checkout flow. Built to learn React state management properly.</p>
+                        <ul class="tags">
+                            <li>React</li>
+                            <li>Tailwind</li>
+                        </ul>
+                        <div class="work-links">
+                            <a href="https://react-estore-sandipsky.netlify.app/" target="_blank" rel="noopener">Live site ↗</a>
+                            <a href="https://github.com/sandipsky/react-estore" target="_blank" rel="noopener">Code ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="work-thumb">
+                        <img src="assets/pro2.png" alt="Restaurant management system screenshot" loading="lazy">
+                    </div>
+                    <div class="work-body">
+                        <h3>Restaurant Management System</h3>
+                        <p>POS-style app for orders, tables and billing. Menu management with role-based access for staff and admins.</p>
+                        <ul class="tags">
+                            <li>Angular</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <div class="work-links">
+                            <a href="https://github.com/sandipsky" target="_blank" rel="noopener">Code ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="work-thumb">
+                        <img src="assets/project-6.jpg" alt="Expense tracker screenshot" loading="lazy">
+                    </div>
+                    <div class="work-body">
+                        <h3>Expense Tracker</h3>
+                        <p>Personal finance tracker with monthly breakdowns and charts. Small app, but I still use it.</p>
+                        <ul class="tags">
+                            <li>React</li>
+                            <li>Charts</li>
+                        </ul>
+                        <div class="work-links">
+                            <a href="https://github.com/sandipsky" target="_blank" rel="noopener">Code ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="work-thumb">
+                        <img src="assets/project-4.jpg" alt="Inventory management system screenshot" loading="lazy">
+                    </div>
+                    <div class="work-body">
+                        <h3>Inventory Management System</h3>
+                        <p>Stock tracking, purchase/sales entries and low-stock alerts for a small retail business.</p>
+                        <ul class="tags">
+                            <li>Angular</li>
+                            <li>Spring Boot</li>
+                        </ul>
+                        <div class="work-links">
+                            <a href="https://github.com/sandipsky" target="_blank" rel="noopener">Code ↗</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <p class="work-more" data-aos="fade-up">
+                More experiments and half-finished ideas on
+                <a href="https://github.com/sandipsky" target="_blank" rel="noopener">GitHub ↗</a>
             </p>
-            <div class="hero-btns">
-                <a href="./assets/CVsandip.pdf" download class="btn">Download CV</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
-        </div>
-        <div class="image-content" data-aos="fade-left">
-            <div class="hero-img">
-                <img src="assets/header.png" alt="header" />
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="intro-image" data-aos="fade-right">
-            <img src="assets/intro.jpg" alt="intro" />
-        </div>
-        <div class="intro-content" data-aos="fade-left">
-            <h2 class="section-header">About Me</h2>
-            <p class="intro-description">
-                I am a passionate web developer with over a year of hands-on experience in creating dynamic and
-                responsive websites. Based in Patan, Lalitpur, I have honed my skills in various web
-                technologies and frameworks, always striving to deliver clean and efficient code. I hold a
-                Bachelor's degree in Computer Science and Information Technology (CSIT), which has provided me
-                with a solid foundation in both the theoretical and practical aspects of web development. I am
-                eager to bring my creativity and technical expertise to new and exciting projects.
-            </p>
-            <h4>My Interests</h4>
-            <div class="intro-flex">
-                <div>
-                    <span><i class="ri-headphone-line"></i></span> Music
-                </div>
-                <div>
-                    <span><i class="ri-film-line"></i></span> Movie
-                </div>
-                <div>
-                    <span><i class="ri-brush-line"></i></span> Art
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <p class="section-subheader" data-aos="fade-down">Why Choose Me</p>
-        <h2 class="section-header" data-aos="fade-down">My Experties Area</h2>
-        <div class="skills-container" data-aos="fade-up">
-            <!-- Frontend -->
-            <div class="category">
-                <h3>Frontend</h3>
-                <ul>
-                    <li><span class="icon"><i class="ri-javascript-line ri-xl"></i></span> Javascript/Typescript</li>
-                    <li><span class="icon"><i class="ri-reactjs-line ri-xl"></i></span> React</li>
-                    <li><span class="icon"><i class="ri-angularjs-fill ri-xl"></i></span> Angular</li>
-                    <li><span class="icon"><i class="ri-tailwind-css-fill ri-xl"></i></span> Tailwind CSS</li>
-                    <li><span class="icon"><i class="ri-bootstrap-fill ri-xl"></i></span> Bootstrap</li>
-                </ul>
+        <section id="experience" class="section">
+            <div class="section-head" data-aos="fade-up">
+                <span class="kicker">Experience</span>
+                <h2>Where I've worked</h2>
             </div>
 
-            <!-- Backend -->
-            <div class="category">
-                <h3>Backend</h3>
-                <ul>
-                    <li><span class="icon"><i class="ri-nodejs-line ri-xl"></i></span> Node.js</li>
-                    <li><span class="icon"><i class="ri-leaf-fill ri-xl"></i></span> Spring Boot</li>
-                    <li><span class="icon"><i class="ri-window-fill ri-xl"></i></span> ASP.NET</li>
-                    <li><span class="icon"><i class="ri-database-2-line ri-xl"></i></span> MySQL</li>
-                </ul>
-            </div>
-
-            <!-- Other -->
-            <div class="category">
-                <h3>Other</h3>
-                <ul>
-                    <li><i class="ri-github-fill ri-xl"></i> Git/Github</li>
-                    <li><i class="ri-camera-2-fill ri-xl"></i> Photoshop</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <p class="section-subheader" data-aos="fade-down">My Qualifications</p>
-        <h2 class="section-header" data-aos="fade-down">Awesome Journey</h2>
-        <div class="journey-grid">
-            <div data-aos="fade-right">
-                <div class="journey-grid-header">
-                    <span><i class="ri-graduation-cap-line"></i></span> Education
-                </div>
-                <div class="journey-card">
-                    <span><i class="ri-circle-fill"></i></span>
-                    <div>
-                        <h4>Bsc. CSIT</h4>
-                        <h5>Academia International College</h5>
+            <div class="xp-list">
+                <div class="xp-row" data-aos="fade-up">
+                    <div class="xp-date">Apr 2026 — Present</div>
+                    <div class="xp-info">
+                        <h3>Frontend Developer · Maitri Services</h3>
                         <p>
-                            <span><i class="ri-calendar-fill"></i></span> 2018-2023
+                            Working on Evaire Capture, a medical coding and chart review
+                            platform used by coders and auditors. Part of the team migrating
+                            the legacy Angular client to React 19 — TanStack Router &amp; Query,
+                            Zustand, Mantine, all in strict TypeScript.
                         </p>
+                        <ul class="tags">
+                            <li>React 19</li>
+                            <li>TypeScript</li>
+                            <li>Angular</li>
+                            <li>TanStack</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="journey-card">
-                    <span><i class="ri-circle-fill"></i></span>
-                    <div>
-                        <h4>+2 Science</h4>
-                        <h5>Ideal Model School</h5>
+
+                <div class="xp-row" data-aos="fade-up">
+                    <div class="xp-date">2023 — 2026</div>
+                    <div class="xp-info">
+                        <h3>Frontend Developer · Annofi Technologies</h3>
                         <p>
-                            <span><i class="ri-calendar-fill"></i></span> 2016-2018
+                            Built and maintained responsive web apps for international clients.
+                            Owned features end to end — from Figma handoff to production release.
                         </p>
+                        <ul class="tags">
+                            <li>Angular</li>
+                            <li>React</li>
+                            <li>Tailwind</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="journey-card">
-                    <span><i class="ri-circle-fill"></i></span>
-                    <div>
-                        <h4>Web Design and Development</h4>
-                        <h5>Aptech Computer Education</h5>
+
+                <div class="xp-row" data-aos="fade-up">
+                    <div class="xp-date">2022 — 2023</div>
+                    <div class="xp-info">
+                        <h3>Frontend Developer · Hamro SAN</h3>
                         <p>
-                            <span><i class="ri-calendar-fill"></i></span> 2016-2017
+                            First dev role. Turned designs into working UI, fixed a lot of
+                            IE-era CSS, and learned how real codebases are put together.
+                        </p>
+                        <ul class="tags">
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="xp-row" data-aos="fade-up">
+                    <div class="xp-date">2020 — 2022</div>
+                    <div class="xp-info">
+                        <h3>Analyst · CloudFactory</h3>
+                        <p>
+                            Data annotation and quality work. Not a coding job, but it taught
+                            me attention to detail and working against deadlines.
                         </p>
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-left">
-                <div class="journey-grid-header">
-                    <span><i class="ri-briefcase-line"></i></span> Experience
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-head" data-aos="fade-up">
+                <span class="kicker">About</span>
+                <h2>A bit about me</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-photo" data-aos="fade-right">
+                    <img src="assets/intro.jpg" alt="Sandip Shakya" loading="lazy">
                 </div>
-                <div class="journey-card">
-                    <span><i class="ri-circle-fill"></i></span>
-                    <div>
-                        <h4>Front End Developer</h4>
-                        <h5>Annofi Technologies Pvt. Ltd</h5>
-                        <p>
-                            <span><i class="ri-calendar-fill"></i></span> 2023-Present
-                        </p>
-                    </div>
-                </div>
-                <div class="journey-card">
-                    <span><i class="ri-circle-fill"></i></span>
-                    <div>
-                        <h4>Front End Developer</h4>
-                        <h5>Hamro SAN Pvt. Ltd</h5>
-                        <p>
-                            <span><i class="ri-calendar-fill"></i></span> 2022-2023
-                        </p>
-                    </div>
-                </div>
-                <div class="journey-card">
-                    <span><i class="ri-circle-fill"></i></span>
-                    <div>
-                        <h4>Analyst</h4>
-                        <h5>Cloudfactory</h5>
-                        <p>
-                            <span><i class="ri-calendar-fill"></i></span> 2020-2022
-                        </p>
+                <div class="about-text" data-aos="fade-left">
+                    <p>
+                        I'm a frontend developer from Patan, Lalitpur. I got into web
+                        development through a design course back in 2016 and never really
+                        left. I hold a BSc in Computer Science and IT (CSIT) from Academia
+                        International College.
+                    </p>
+                    <p>
+                        These days I spend most of my time in React and TypeScript,
+                        but I've shipped plenty of Angular too. I care about interfaces
+                        that feel fast, code that the next person can read, and getting
+                        the small details right.
+                    </p>
+                    <p>
+                        Away from the keyboard: music, movies, and the occasional sketch.
+                    </p>
+
+                    <div class="skills" data-aos="fade-up">
+                        <h4>Tools I reach for</h4>
+                        <ul class="tags tags-lg">
+                            <li>TypeScript</li>
+                            <li>React</li>
+                            <li>Angular</li>
+                            <li>Tailwind CSS</li>
+                            <li>Zustand</li>
+                            <li>TanStack Query</li>
+                            <li>Node.js</li>
+                            <li>MySQL</li>
+                            <li>Git</li>
+                            <li>Figma</li>
+                            <li>Vite</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="portfolio" class="portfolio">
-        <div class="portfolio-container">
-            <p class="section-subheader" data-aos="fade-down">My Portfolio</p>
-            <h2 class="section-header" data-aos="fade-down">Recent Works</h2>
-            <div class="portfolio-grid" data-aos="fade-up">
-                <div class="portfolio-card mix web">
-                    <img src="assets/pro1.png" alt="project" />
-                    <div class="card-overlay">
-                        <div class="card-overlay-content">
-                            <div>
-                                <h2>Ecommerce Website</h2>
-                            </div>
-                            <div>
-                                <a href="https://www.github.com/sandipsky/react-estore" target="_blank" class="portfolio-icon"><i
-                                        class="ri-github-fill ri-2x"></i></a>
-                                <a href="https://react-estore-sandipsky.netlify.app/" target="_blank" class="portfolio-icon"><i
-                                        class="ri-external-link-line ri-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card mix web game">
-                    <img src="assets/pro2.png" alt="project" />
-                    <div class="card-overlay">
-                        <div class="card-overlay-content">
-                            <div>
-                                <h2>Restaurant Management System</h2>
-                            </div>
-                            <div>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-github-fill ri-2x"></i></a>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-external-link-line ri-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card mix design">
-                    <img src="assets/project-3.jpg" alt="project" />
-                    <div class="card-overlay">
-                        <div class="card-overlay-content">
-                            <div>
-                                <h2>Ecommerce Admin Panel</h2>
-                            </div>
-                            <div>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-github-fill ri-2x"></i></a>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-external-link-line ri-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card mix design web">
-                    <img src="assets/project-4.jpg" alt="project" />
-                    <div class="card-overlay">
-                        <div class="card-overlay-content">
-                            <div>
-                                <h2>Inventory Management System</h2>
-                            </div>
-                            <div>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-github-fill ri-2x"></i></a>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-external-link-line ri-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card mix design game">
-                    <img src="assets/project-5.jpg" alt="project" />
-                    <div class="card-overlay">
-                        <div class="card-overlay-content">
-                            <div>
-                                <h2>Dental Management System</h2>
-                            </div>
-                            <div>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-github-fill ri-2x"></i></a>
-                                <a href="https://www.github.com" target="_blank" class="portfolio-icon"><i
-                                        class="ri-external-link-line ri-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-card mix design">
-                    <img src="assets/project-6.jpg" alt="project" />
-                    <div class="card-overlay">
-                        <div class="card-overlay-content">
-                            <div>
-                                <h2>Expense Tracker</h2>
-                            </div>
-                            <div>
-                                <a href="https://www.github.com/react-expense-tracker" target="_blank" class="portfolio-icon"><i
-                                        class="ri-github-fill ri-2x"></i></a>
-                                <a href="https://www.github.com/react-expense-tracker" target="_blank" class="portfolio-icon"><i
-                                        class="ri-external-link-line ri-2x"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <p class="section-subheader" data-aos="fade-down">Contact Me</p>
-        <h2 class="section-header" data-aos="fade-down">Have A Project On Your Mind</h2>
-        <div class="contact-container">
-            <div data-aos="fade-right">
-                <div class="intro-grid">
-                    <h5>
-                        <span><i class="ri-phone-line"></i></span> Phone
-                    </h5>
-                    <span>:</span>
-                    <p>+977 9843916741</p>
-                    <h5>
-                        <span><i class="ri-mail-line"></i></span> Email
-                    </h5>
-                    <span>:</span>
-                    <p>sandipshakya75@gmail.com</p>
-                </div>
-
-                <div class="contact-socials">
-                    <a href="https://www.linkedin.com/in/sandip-shakya-8230b91a5/" target="_blank" class="contact-icon"><i
-                            class="ri-linkedin-fill ri-2x"></i></a>
-                    <a href="https://www.github.com/sandipsky" target="_blank" class="contact-icon"><i
-                            class="ri-github-fill ri-2x"></i></a>
-                </div>
+        <section id="contact" class="section contact">
+            <div class="section-head" data-aos="fade-up">
+                <span class="kicker">Contact</span>
+                <h2>Let's build <em>something</em></h2>
+                <p class="contact-lede">
+                    Have a project in mind, or just want to say hi?
+                    My inbox is always open.
+                </p>
             </div>
 
-            <form action="#contact" id="contact-form" onsubmit="handleForm()" class="contact-form" data-aos="fade-left">
-                <div class="form-group">
-                    <input id="fullName" type="text" class="form-control" placeholder="Full name" required>
-                    <input id="email" type="email" class="form-control" placeholder="Email address" required>
+            <div class="contact-grid">
+                <div class="contact-details" data-aos="fade-right">
+                    <a href="mailto:sandipshakya75@gmail.com" class="contact-mail">sandipshakya75@gmail.com</a>
+                    <p class="contact-phone">+977 9843916741</p>
+                    <div class="contact-socials">
+                        <a href="https://github.com/sandipsky" target="_blank" rel="noopener">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/in/sandip-shakya-8230b91a5/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                    </div>
                 </div>
-                <input id="subject" type="text" class="form-control" placeholder="Subject">
-                <textarea id="message" rows="5" class="form-control" placeholder="Tell about your project"></textarea>
-                <button type="submit" class="btn contact-btn" value="Send Message">Send Message</button>
-            </form>
 
-        </div>
-    </section>
+                <form id="contact-form" class="contact-form" data-aos="fade-left">
+                    <div class="form-row">
+                        <input id="fullName" type="text" placeholder="Your name" required>
+                        <input id="email" type="email" placeholder="Your email" required>
+                    </div>
+                    <input id="subject" type="text" placeholder="Subject">
+                    <textarea id="message" rows="5" placeholder="What's on your mind?" required></textarea>
+                    <button type="submit" class="btn btn-solid" id="send-btn">Send message</button>
+                    <p class="form-note" id="form-note"></p>
+                </form>
+            </div>
+        </section>
 
-    <footer>
-        <p>Copyright 2025 &copy; SandipShakya All rights reserved.</p>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Sandip Shakya. Designed &amp; built by hand — no frameworks.</p>
+        <p class="footer-time">Patan, Nepal · <span id="local-time"></span></p>
     </footer>
+
+    <script src="./js/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-<script src="./js/aos.js"></script>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script src="./js/main.js"></script>
+
 </html>
