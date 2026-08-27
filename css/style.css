@@ -210,10 +210,6 @@ em {
 
 .hero {
     padding: clamp(4rem, 10vh, 7rem) var(--gutter) 6rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 3rem;
 }
 
 .hero h1 {
@@ -256,34 +252,6 @@ em {
 
 @keyframes pulse {
     50% { box-shadow: 0 0 0 7px rgba(108, 191, 124, 0.08); }
-}
-
-/* polaroid-style portrait card */
-.hero-photo {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 0.9rem 0.9rem 1.1rem;
-    transform: rotate(2.5deg);
-    transition: transform 0.35s ease;
-    width: clamp(220px, 22vw, 300px);
-}
-
-.hero-photo:hover {
-    transform: rotate(0deg) scale(1.02);
-}
-
-.hero-photo img {
-    border-radius: 8px;
-    width: 100%;
-}
-
-.hero-photo figcaption {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--muted);
-    text-align: center;
-    padding-top: 0.8rem;
 }
 
 /* ---- sections ---- */
@@ -609,16 +577,6 @@ em {
 
     .menu-btn {
         display: flex;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-photo {
-        order: -1;
-        width: 200px;
-        transform: rotate(-2deg);
     }
 
     .xp-row {
