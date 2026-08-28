@@ -24,6 +24,29 @@ drawer.querySelectorAll('a').forEach(link => {
     });
 });
 
+// --- theme toggle (dark by default; the boot script in index.html sets it early) ---
+
+const themeBtn = document.getElementById('theme-btn');
+
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    themeBtn.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+    );
+    try {
+        localStorage.setItem('theme', theme);
+    } catch (e) {
+        // private mode / storage blocked — the toggle still works for this visit
+    }
+}
+
+applyTheme(document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
+
+themeBtn.addEventListener('click', () => {
+    applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+});
+
 // --- scroll animations (AOS) ---
 
 AOS.init({

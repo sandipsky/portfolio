@@ -13,6 +13,15 @@
 
     <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- set the theme before first paint so there's no flash -->
+    <script>
+        (function () {
+            var saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (e) { }
+            document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark';
+        })();
+    </script>
 </head>
 
 <body>
@@ -26,6 +35,18 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
+
+        <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch to light mode" title="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"></path>
+            </svg>
+        </button>
 
         <a href="./assets/CVsandip.pdf" download class="btn btn-ghost nav-cv">Resume</a>
 
@@ -77,7 +98,7 @@
             <div class="work-grid">
                 <article class="work-card" data-aos="fade-up">
                     <div class="work-thumb">
-                        <img src="assets/pro1.png" alt="E-Store screenshot" loading="lazy">
+                        <img src="assets/estore.png" alt="E-Store screenshot" loading="lazy">
                     </div>
                     <div class="work-body">
                         <h3>E-Store</h3>
@@ -95,7 +116,7 @@
 
                 <article class="work-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="work-thumb">
-                        <img src="assets/pro2.png" alt="Chess game screenshot" loading="lazy">
+                        <img src="assets/chess.png" alt="Chess game screenshot" loading="lazy">
                     </div>
                     <div class="work-body">
                         <h3>Chess Game</h3>
@@ -105,6 +126,7 @@
                             <li>TypeScript</li>
                         </ul>
                         <div class="work-links">
+                            <a href="https://chessmate-ng.netlify.app/" target="_blank" rel="noopener">Live site ↗</a>
                             <a href="https://github.com/sandipsky/chess-game" target="_blank" rel="noopener">Code ↗</a>
                         </div>
                     </div>
@@ -112,7 +134,7 @@
 
                 <article class="work-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="work-thumb">
-                        <img src="assets/project-6.jpg" alt="Expense tracker screenshot" loading="lazy">
+                        <img src="assets/expensify.png" alt="Expense tracker screenshot" loading="lazy">
                     </div>
                     <div class="work-body">
                         <h3>Expense Tracker</h3>
@@ -122,6 +144,7 @@
                             <li>Charts</li>
                         </ul>
                         <div class="work-links">
+                            <a href="https://hisabkitabkhata.netlify.app/" target="_blank" rel="noopener">Live site ↗</a>
                             <a href="https://github.com/sandipsky" target="_blank" rel="noopener">Code ↗</a>
                         </div>
                     </div>
@@ -129,7 +152,7 @@
 
                 <article class="work-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="work-thumb">
-                        <img src="assets/project-4.jpg" alt="Inventory management system screenshot" loading="lazy">
+                        <img src="assets/inventory.png" alt="Inventory management system screenshot" loading="lazy">
                     </div>
                     <div class="work-body">
                         <h3>Inventory Management System</h3>
@@ -161,7 +184,7 @@
                 <div class="xp-row" data-aos="fade-up">
                     <div class="xp-date">Apr 2026 — Present</div>
                     <div class="xp-info">
-                        <h3>Frontend Developer · Maitri Services</h3>
+                        <h3>Software Engineer · Maitri Services</h3>
                         <p>
                             Working on Evaire Capture, a medical coding and chart review
                             platform used by coders and auditors. Part of the team migrating
